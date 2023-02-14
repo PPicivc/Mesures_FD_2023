@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <style>
         #map {
-            width: 1200px;
-            height: 800px;
+            width: 1233px;
+            height: 848px;
         }
         </style>
         <title>Zones Délimitées  2023 - Version projet (sous réserve d'officialisation par Arrêté Préfectoral)</title>
@@ -91,7 +91,7 @@
                         <td colspan="2">' + (feature.properties['aoc_region'] !== null ? autolinker.link(feature.properties['aoc_region'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['ZD_nom'] !== null ? autolinker.link(feature.properties['ZD_nom'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['Nom_ZD2022'] !== null ? autolinker.link(feature.properties['Nom_ZD2022'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -172,25 +172,25 @@
         bounds_group.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
         map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
         map.on("zoomend", function(e) {
-            if (map.getZoom() <= 14 && map.getZoom() >= 2) {
+            if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
-            } else if (map.getZoom() > 14 || map.getZoom() < 2) {
+            } else if (map.getZoom() > 15 || map.getZoom() < 2) {
                 map.removeLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
             }
-            if (map.getZoom() <= 14 && map.getZoom() >= 2) {
+            if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
-            } else if (map.getZoom() > 14 || map.getZoom() < 2) {
+            } else if (map.getZoom() > 15 || map.getZoom() < 2) {
                 map.removeLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
             }
         });
-            if (map.getZoom() <= 14 && map.getZoom() >= 2) {
+            if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
-            } else if (map.getZoom() > 14 || map.getZoom() < 2) {
+            } else if (map.getZoom() > 15 || map.getZoom() < 2) {
                 map.removeLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
             }
-            if (map.getZoom() <= 14 && map.getZoom() >= 2) {
+            if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
-            } else if (map.getZoom() > 14 || map.getZoom() < 2) {
+            } else if (map.getZoom() > 15 || map.getZoom() < 2) {
                 map.removeLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
             }
             var title = new L.Control();
