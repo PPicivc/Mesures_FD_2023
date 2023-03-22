@@ -11,8 +11,8 @@
         <link rel="stylesheet" href="css/leaflet-control-geocoder.Geocoder.css">
         <style>
         #map {
-            width: 1233px;
-            height: 848px;
+            width: 1172px;
+            height: 866px;
         }
         </style>
         <title>Zones Délimitées  2023 - Version projet (sous réserve d'officialisation par Arrêté Préfectoral)</title>
@@ -30,7 +30,7 @@
         <script src="js/labelgun.min.js"></script>
         <script src="js/labels.js"></script>
         <script src="js/leaflet-control-geocoder.Geocoder.js"></script>
-        <script src="data/PrimtredesurveillancedesZonesDlomites2023_1.js"></script>
+        <script src="data/PrimtredesurveillancedesZonesDlimites2023_1.js"></script>
         <script src="data/ZonedeluttespcifiquecontrelacicadelleFD2023_2.js"></script>
         <script>
         var highlightLayer;
@@ -74,7 +74,7 @@
         });
         layer_GoogleSatellite_0;
         map.addLayer(layer_GoogleSatellite_0);
-        function pop_PrimtredesurveillancedesZonesDlomites2023_1(feature, layer) {
+        function pop_PrimtredesurveillancedesZonesDlimites2023_1(feature, layer) {
             layer.on({
                 mouseout: function(e) {
                     for (i in e.target._eventParents) {
@@ -88,18 +88,15 @@
                         <td colspan="2">' + (feature.properties['aoc_nom'] !== null ? autolinker.link(feature.properties['aoc_nom'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['aoc_region'] !== null ? autolinker.link(feature.properties['aoc_region'].toLocaleString()) : '') + '</td>\
-                    </tr>\
-                    <tr>\
                         <td colspan="2">' + (feature.properties['Nom_ZD2022'] !== null ? autolinker.link(feature.properties['Nom_ZD2022'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
         }
 
-        function style_PrimtredesurveillancedesZonesDlomites2023_1_0() {
+        function style_PrimtredesurveillancedesZonesDlimites2023_1_0() {
             return {
-                pane: 'pane_PrimtredesurveillancedesZonesDlomites2023_1',
+                pane: 'pane_PrimtredesurveillancedesZonesDlimites2023_1',
                 opacity: 1,
                 color: 'rgba(42,228,255,0.9568627450980393)',
                 dashArray: '',
@@ -110,20 +107,20 @@
                 interactive: true,
             }
         }
-        map.createPane('pane_PrimtredesurveillancedesZonesDlomites2023_1');
-        map.getPane('pane_PrimtredesurveillancedesZonesDlomites2023_1').style.zIndex = 401;
-        map.getPane('pane_PrimtredesurveillancedesZonesDlomites2023_1').style['mix-blend-mode'] = 'normal';
-        var layer_PrimtredesurveillancedesZonesDlomites2023_1 = new L.geoJson(json_PrimtredesurveillancedesZonesDlomites2023_1, {
+        map.createPane('pane_PrimtredesurveillancedesZonesDlimites2023_1');
+        map.getPane('pane_PrimtredesurveillancedesZonesDlimites2023_1').style.zIndex = 401;
+        map.getPane('pane_PrimtredesurveillancedesZonesDlimites2023_1').style['mix-blend-mode'] = 'normal';
+        var layer_PrimtredesurveillancedesZonesDlimites2023_1 = new L.geoJson(json_PrimtredesurveillancedesZonesDlimites2023_1, {
             attribution: '',
             interactive: true,
-            dataVar: 'json_PrimtredesurveillancedesZonesDlomites2023_1',
-            layerName: 'layer_PrimtredesurveillancedesZonesDlomites2023_1',
-            pane: 'pane_PrimtredesurveillancedesZonesDlomites2023_1',
-            onEachFeature: pop_PrimtredesurveillancedesZonesDlomites2023_1,
-            style: style_PrimtredesurveillancedesZonesDlomites2023_1_0,
+            dataVar: 'json_PrimtredesurveillancedesZonesDlimites2023_1',
+            layerName: 'layer_PrimtredesurveillancedesZonesDlimites2023_1',
+            pane: 'pane_PrimtredesurveillancedesZonesDlimites2023_1',
+            onEachFeature: pop_PrimtredesurveillancedesZonesDlimites2023_1,
+            style: style_PrimtredesurveillancedesZonesDlimites2023_1_0,
         });
-        bounds_group.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
-        map.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
+        bounds_group.addLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
+        map.addLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
         function pop_ZonedeluttespcifiquecontrelacicadelleFD2023_2(feature, layer) {
             layer.on({
                 mouseout: function(e) {
@@ -138,7 +135,7 @@
                         <td colspan="2">' + (feature.properties['aoc_nom'] !== null ? autolinker.link(feature.properties['aoc_nom'].toLocaleString()) : '') + '</td>\
                     </tr>\
                     <tr>\
-                        <td colspan="2">' + (feature.properties['aoc_region'] !== null ? autolinker.link(feature.properties['aoc_region'].toLocaleString()) : '') + '</td>\
+                        <td colspan="2">' + (feature.properties['aoc_petite'] !== null ? autolinker.link(feature.properties['aoc_petite'].toLocaleString()) : '') + '</td>\
                     </tr>\
                 </table>';
             layer.bindPopup(popupContent, {maxHeight: 400});
@@ -148,11 +145,11 @@
             return {
                 pane: 'pane_ZonedeluttespcifiquecontrelacicadelleFD2023_2',
                 opacity: 1,
-                color: 'rgba(240,224,42,1.0)',
+                color: 'rgba(234,194,24,1.0)',
                 dashArray: '',
                 lineCap: 'butt',
                 lineJoin: 'miter',
-                weight: 1.0, 
+                weight: 2.0, 
                 fillOpacity: 0,
                 interactive: true,
             }
@@ -173,9 +170,9 @@
         map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
         map.on("zoomend", function(e) {
             if (map.getZoom() <= 15 && map.getZoom() >= 2) {
-                map.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
+                map.addLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
             } else if (map.getZoom() > 15 || map.getZoom() < 2) {
-                map.removeLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
+                map.removeLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
             }
             if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
@@ -184,9 +181,9 @@
             }
         });
             if (map.getZoom() <= 15 && map.getZoom() >= 2) {
-                map.addLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
+                map.addLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
             } else if (map.getZoom() > 15 || map.getZoom() < 2) {
-                map.removeLayer(layer_PrimtredesurveillancedesZonesDlomites2023_1);
+                map.removeLayer(layer_PrimtredesurveillancedesZonesDlimites2023_1);
             }
             if (map.getZoom() <= 15 && map.getZoom() >= 2) {
                 map.addLayer(layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2);
@@ -214,7 +211,7 @@
         document.getElementsByClassName('leaflet-control-geocoder-icon')[0]
         .title += 'Search for a place';
         var baseMaps = {};
-        L.control.layers(baseMaps,{'<img src="legend/ZonedeluttespcifiquecontrelacicadelleFD2023_2.png" /> Zone de lutte spécifique contre la cicadelle FD - 2023': layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2,'<img src="legend/PrimtredesurveillancedesZonesDlomites2023_1.png" /> Périmètre de surveillance des Zones Délomitées - 2023': layer_PrimtredesurveillancedesZonesDlomites2023_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
+        L.control.layers(baseMaps,{'<img src="legend/ZonedeluttespcifiquecontrelacicadelleFD2023_2.png" /> Zone de lutte spécifique contre la cicadelle FD - 2023': layer_ZonedeluttespcifiquecontrelacicadelleFD2023_2,'<img src="legend/PrimtredesurveillancedesZonesDlimites2023_1.png" /> Périmètre de surveillance des Zones Délimitées - 2023': layer_PrimtredesurveillancedesZonesDlimites2023_1,"Google Satellite": layer_GoogleSatellite_0,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
     </body>
